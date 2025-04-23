@@ -1,0 +1,13 @@
+{
+    "tasks": {
+        "test": "deno task test:deno && deno task test:node",
+        "test:deno": "deno test --allow-all",
+        "test:node": "node --test"
+    },
+    "fmt": {
+        "indentWidth": 4,
+        "semiColons": true,
+        "singleQuote": false,
+        "lineWidth": 200
+    }
+}
