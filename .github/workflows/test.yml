@@ -16,7 +16,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        deno: [ v2.2.11, v2.3.0-rc.2 ]
+        deno: [ 2.2.11, rc, canary ]
 
     steps:
       - name: Setup repo
@@ -26,6 +26,6 @@ jobs:
         uses: denoland/setup-deno@v2
         with:
           deno-version: ${{ matrix.deno }}
-          
+
       - name: Run tests
         run: deno test --allow-all
