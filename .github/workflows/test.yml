@@ -11,7 +11,6 @@ permissions:
 
 jobs:
   deno-test:
-    if: always()
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -29,4 +28,5 @@ jobs:
           deno-version: ${{ matrix.deno }}
 
       - name: Run tests
+        if: always()
         run: deno test --allow-all
