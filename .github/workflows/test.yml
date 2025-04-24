@@ -11,6 +11,7 @@ permissions:
 
 jobs:
   deno-test:
+    if: always()
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -20,9 +21,11 @@ jobs:
 
     steps:
       - name: Setup repo
+        if: always()
         uses: actions/checkout@v4
 
       - name: Setup Deno
+        if: always()
         uses: denoland/setup-deno@v2
         with:
           deno-version: ${{ matrix.deno }}
