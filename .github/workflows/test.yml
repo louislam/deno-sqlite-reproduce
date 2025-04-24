@@ -11,6 +11,7 @@ permissions:
 
 jobs:
   deno-test:
+    if: always()
     runs-on: ${{ matrix.os }}
 
     strategy:
